@@ -1793,16 +1793,27 @@ h2 {
 
 .ack-ghost {
   position: absolute;
-  right: -0.05em;
-  bottom: -0.28em;
+  left: -0.07em;
+  bottom: -0.25em;
   color: transparent;
   font-family: var(--display);
-  font-size: clamp(250px, 46vw, 680px);
+  font-size: clamp(200px, 26vw, 400px);
   letter-spacing: -0.04em;
   line-height: 0.8;
-  -webkit-text-stroke: 1px rgba(255, 253, 248, 0.12);
+  -webkit-text-stroke: 1px rgba(255, 253, 248, 0.1);
   pointer-events: none;
   user-select: none;
+}
+
+.ack-eyebrow {
+  position: relative;
+  z-index: 1;
+  margin-bottom: clamp(30px, 4vw, 48px);
+  color: rgba(255, 253, 248, 0.74);
+}
+
+.ack-eyebrow .eyebrow-line {
+  background: var(--paper-bright);
 }
 
 .ack-grid {
@@ -1810,17 +1821,8 @@ h2 {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(42px, 7vw, 112px);
+  gap: clamp(42px, 6vw, 96px);
   align-items: start;
-}
-
-.ack-heading .eyebrow {
-  margin-bottom: 26px;
-  color: rgba(255, 253, 248, 0.74);
-}
-
-.ack-heading .eyebrow-line {
-  background: var(--paper-bright);
 }
 
 .ack-heading h2 {
@@ -1859,8 +1861,7 @@ h2 {
 }
 
 .ack-copy {
-  max-width: 650px;
-  padding-top: 8px;
+  max-width: 660px;
 }
 
 .ack-copy > p {
@@ -1879,13 +1880,55 @@ h2 {
   line-height: 1.75;
 }
 
-.ack-copy .ack-legal {
-  margin: 24px 0 0;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 253, 248, 0.22);
+.ack-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0 24px;
+}
+
+.ack-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 253, 248, 0.36);
+  background: rgba(17, 24, 26, 0.05);
+  color: var(--paper-bright);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s var(--ease);
+}
+
+.ack-legal {
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 253, 248, 0.18);
+  background: rgba(17, 24, 26, 0.1);
+}
+
+.ack-legal-label {
+  margin: 0 0 9px;
+  color: rgba(255, 253, 248, 0.56);
+  font-family: var(--mono);
+  font-size: 7.5px;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.ack-legal p:not(.ack-legal-label) {
+  margin: 0 0 8px;
   color: rgba(255, 253, 248, 0.72);
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 1.9;
+}
+
+.ack-legal p:last-child {
+  margin-bottom: 0;
 }
 
 .ack-legal a {
@@ -1897,29 +1940,6 @@ h2 {
 .ack-legal a:hover {
   color: #ffd8c1;
   border-color: #ffd8c1;
-}
-
-.ack-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 27px;
-}
-
-.ack-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  min-width: 228px;
-  padding: 12px 15px;
-  border: 1px solid rgba(255, 253, 248, 0.36);
-  background: rgba(17, 24, 26, 0.05);
-  color: var(--paper-bright);
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s var(--ease);
 }
 
 .ack-link-text {
@@ -1962,6 +1982,13 @@ h2 {
 
 .ack-link:hover svg {
   transform: translate(3px, -3px);
+}
+
+@media (min-width: 981px) {
+  .ack-copy {
+    padding-left: clamp(28px, 3.4vw, 48px);
+    border-left: 1px solid rgba(255, 253, 248, 0.2);
+  }
 }
 
 .acknowledgements :focus-visible {
@@ -2791,6 +2818,14 @@ h2 {
     padding-top: 0;
   }
 
+  .ack-eyebrow {
+    margin-bottom: 28px;
+  }
+
+  .ack-ghost {
+    display: none;
+  }
+
   .contact {
     min-height: 0;
   }
@@ -3121,8 +3156,8 @@ h2 {
     font-size: clamp(2.6rem, 11.5vw, 3.8rem);
   }
 
-  .ack-heading .eyebrow {
-    margin-bottom: 20px;
+  .ack-eyebrow {
+    margin-bottom: 24px;
   }
 
   .ack-en {
@@ -3142,21 +3177,22 @@ h2 {
     font-size: 1.08rem;
   }
 
-  .ack-copy .ack-legal {
-    font-size: 11px;
-  }
-
   .ack-links {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    margin-top: 8px;
+    margin-bottom: 20px;
   }
 
-  .ack-link {
-    width: 100%;
-    min-width: 0;
+  .ack-legal {
+    padding: 15px 16px;
+  }
+
+  .ack-legal p:not(.ack-legal-label) {
+    font-size: 11.5px;
   }
 
   .ack-ghost {
-    font-size: 72vw;
+    display: none;
   }
 
   .contact {
