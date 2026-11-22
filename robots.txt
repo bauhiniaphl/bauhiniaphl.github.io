@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bauhiniaphl.github.io/sitemap.xml

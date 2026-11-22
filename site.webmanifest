@@ -1,0 +1,25 @@
+{
+  "name": "MigrainE｜武汉米格雷纳网络",
+  "short_name": "MigrainE",
+  "description": "武汉米格雷纳网络是一间以世界观叙事为核心的独立游戏工作室。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#11181a",
+  "theme_color": "#11181a",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
