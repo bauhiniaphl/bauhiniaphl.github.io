@@ -4,7 +4,7 @@
 
 - 目标地址：<https://bauhiniaphl.github.io/>
 - 当前企划：《拉普拉要塞：边界暗影》 / *Laplace Citadel: Boundary Shadows*
-- 企划性质：基于《重返未来：1999》世界观创作的非商业同人游戏作品
+- 企划性质：基于《重返未来：1999》世界观创作的完全非商业同人游戏作品
 - 页面语言：中文为主，英文作视觉点缀
 - 技术：HTML + CSS + 原生 JavaScript
 
@@ -59,7 +59,7 @@
 
 ## 同人声明与致谢
 
-本企划是《重返未来：1999》的非商业同人游戏作品，与深蓝互动及官方无隶属关系。
+本企划是《重返未来：1999》的完全非商业同人游戏作品，与深蓝互动及官方无隶属关系。
 
 - 《重返未来：1999》官网（国服）：<https://re.bluepoch.com/>
 - Steam 页面（国际服 / PC）：<https://store.steampowered.com/app/3092660/Reverse_1999/>
@@ -87,4 +87,5 @@ python -m http.server 4173
 - 页面不依赖外部字体、CDN 或追踪脚本，国内网络环境也能完整显示。
 - 所有动效均支持 `prefers-reduced-motion`。
 - 页面不包含分析统计或 Cookie。以后如需统计，建议使用注重隐私的方案。
+
 
