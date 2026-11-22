@@ -86,7 +86,7 @@
   /* ------------------------------------------------------------
      Scrollspy
      ------------------------------------------------------------ */
-  const sections = ['project', 'world', 'studio', 'contact']
+  const sections = ['project', 'world', 'studio', 'acknowledgements', 'contact']
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 

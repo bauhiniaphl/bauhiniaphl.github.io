@@ -1,9 +1,10 @@
-# MigrainE · 武汉米格雷纳网络
+﻿# MigrainE · 武汉米格雷纳网络
 
 面向 GitHub Pages 的静态工作室主页，无构建步骤、无第三方依赖。
 
 - 目标地址：<https://bauhiniaphl.github.io/>
 - 当前企划：《拉普拉要塞：边界暗影》 / *Laplace Citadel: Boundary Shadows*
+- 企划性质：基于《重返未来：1999》世界观创作的非商业同人游戏作品
 - 页面语言：中文为主，英文作视觉点缀
 - 技术：HTML + CSS + 原生 JavaScript
 
@@ -16,6 +17,7 @@
 | The Dossier | 摩德纳、拉普拉要塞、重塑之手、暴雨免疫术式、康丝坦丁事件 |
 | Interlude | “我们 / 那只手”的衔尾蛇档案摘录 |
 | Studio | 工作室自述、三条创作原则、联系方式 |
+| Acknowledgements | 对《重返未来：1999》与深蓝互动的致谢、同人声明、官网与 Steam 指路 |
 | Contact | 邮箱、GitHub、页脚 |
 
 ## 文件说明
@@ -47,13 +49,24 @@
 
 ## 修改内容
 
-- **文案**：直接编辑 `index.html`。每个区块有清晰的 `id`（`#project`、`#world`、`#studio`、`#contact`）。
+- **文案**：直接编辑 `index.html`。每个区块有清晰的 `id`（`#project`、`#world`、`#studio`、`#acknowledgements`、`#contact`）。
 - **邮箱**：全站搜索 `migrainebauhinia@163.com`，替换为新的公开邮箱。
 - **GitHub 用户名**：全站搜索 `bauhiniaphl`。
 - **站点域名**：若最终不是 `https://bauhiniaphl.github.io/`，搜索并替换以下文件中的域名：
   `index.html`、`robots.txt`、`sitemap.xml`。
 - **配色与字体**：编辑 `styles.css` 顶部的 `:root` 变量。
 - **替换 Logo**：替换 `assets/` 中同名文件即可，页面不用改。建议保持 1:1 正方形。
+
+## 同人声明与致谢
+
+本企划是《重返未来：1999》的非商业同人游戏作品，与深蓝互动及官方无隶属关系。
+
+- 《重返未来：1999》官网（国服）：<https://re.bluepoch.com/>
+- Steam 页面（国际服 / PC）：<https://store.steampowered.com/app/3092660/Reverse_1999/>
+
+作品中出现的原作角色、设定及相关美术来源自《重返未来：1999》，版权归深蓝互动所有。站内原创文字与工作室标识归武汉米格雷纳网络所有。若版权方有任何疑虑，请通过 `migrainebauhinia@163.com` 联系工作室。
+
+页面中的对应声明位于 `#acknowledgements` 区块和页脚；更新主视觉或角色素材时，请保留该声明，不要移除原作署名。
 
 ## 本地预览
 
@@ -74,3 +87,4 @@ python -m http.server 4173
 - 页面不依赖外部字体、CDN 或追踪脚本，国内网络环境也能完整显示。
 - 所有动效均支持 `prefers-reduced-motion`。
 - 页面不包含分析统计或 Cookie。以后如需统计，建议使用注重隐私的方案。
+
